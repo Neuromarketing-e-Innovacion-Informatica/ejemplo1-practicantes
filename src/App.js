@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Páginas
+import { Inicio } from './pages/Inicio';
+import { NoPage } from './pages/NoPage';
+
+export const App = () => {
+    return (
+        <Router>
+            <Switch>
+                {/* Cuando accedamos a /, mostrará el componente Inicio */}
+                <Route exact path="/" component={ Inicio } />
+
+                {/* Cuando se acceda a una ruta que no existe, mostrará el componente NoPage */}
+                <Route component={ NoPage } />
+            </Switch>
+        </Router>
+    )
 }
-
-export default App;
