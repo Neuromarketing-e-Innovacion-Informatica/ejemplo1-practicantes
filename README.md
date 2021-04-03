@@ -3,7 +3,7 @@
 ### Abrir CMD/Terminal
 ```
 > git clone https://github.com/Neuromarketing-e-Innovacion-Informatica/ejemplo1-practicantes.git
-> cd proyecto1
+> cd ejemplo1
 > code .
 ```
 
